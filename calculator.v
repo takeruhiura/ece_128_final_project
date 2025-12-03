@@ -22,13 +22,13 @@ module calculator(
     
     divider_mod div(.dividend(a), .divisor(b), .quotient(div_val));
     
-    and_mod and(.a(a), .b(b), .result(and_val));
+    and_mod and_op(.a(a), .b(b), .result(and_val));
 
-    or_mod or(.a(a), .b(b), .result(or_val));
+    or_mod or_op(.a(a), .b(b), .result(or_val));
     
-    xor_mod xor(.a(a), .b(b), .result(xor_val));
+    xor_mod xor_op(.a(a), .b(b), .result(xor_val));
     
-    not_mod not(.a(a), .result(not_val));
+    not_mod not_op(.a(a), .result(not_val));
     
     reg [2:0] state;
     parameter IDLE = 3'b000;

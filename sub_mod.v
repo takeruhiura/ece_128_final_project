@@ -7,7 +7,7 @@ module sub_mod(
 );
 
     wire [3:0] b_complement;
-    wire [7:0] difference; 
+    wire [3:0] difference; 
     
     assign b_complement = ~b + 1;
     
@@ -17,6 +17,6 @@ module sub_mod(
         .S1_f(difference)  
     );
     
-    assign result = difference;  
+    assign result = {4'b0, difference};  
     
 endmodule
